@@ -74,6 +74,13 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background .4s; /* for dark mode animation */
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 h1, h2, h3 {
@@ -84,6 +91,8 @@ h1, h2, h3 {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -96,16 +105,17 @@ img {
 }
 
 /*=============== THEME ===============*/
-.nav__buttons{
+.nav__buttons {
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
 }
-.change-theme{
+
+.change-theme {
   font-size: 1.25rem;
-  columns: var(--title-color);
+  color: var(--title-color); /* Fix: Use color instead of columns */
   cursor: pointer;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 /*========== Variables Dark theme ==========*/
@@ -116,43 +126,47 @@ body.dark-theme {
   --container-color: hsl(207, 4%, 12%);
 }
 
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
-.dark-theme  .nav,
+/*========== Color changes in some parts of the website, in light theme ==========*/
+.dark-theme .nav,
 .dark-theme .nav__menu,
-.dark__theme .scrollup{
+.dark-theme .scrollup { /* Fix: Typo here, it should be .dark-theme */
   background-color: var(--container-color);
-  box-shadow: 0 4px 20px hsla(207,24%,8%,.4);
+  box-shadow: 0 4px 20px hsla(207, 24%, 8%, 0.4);
 }
 
-.dark-theme .home__shape-wawes,
+.dark-theme .home__shape-waves,
 .dark-theme .home__shape-circle,
 .dark-theme .qualification__img,
-.dark-theme .testimonial__img{
+.dark-theme .testimonial__img {
   filter: invert(1);
 }
 
-.dark-theme .home__social-link{
+.dark-theme .home__social-link {
   color: var(--title-color);
 }
-.dark-theme .section__border{
-  border-bottom: 1px solid hsl(207,4% 32%);
+
+.dark-theme .section__border {
+  border-bottom: 1px solid hsl(207, 4%, 32%);
 }
-.dark-theme::-webkit-scrollbar{
-  background-color: hsl(207,4%,15%);
+
+/* Scrollbar styling (may not work in all browsers) */
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(207, 4%, 15%);
 }
-.dark-theme::-webkit-scrollbar-thumb{
-  background-color: hsl(207,4%,25%);
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 25%);
 }
-.dark-theme::-webkit-scrollbar-thumb:hover{
-  background-color: hsl(207,4%,35%);
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 35%);
 }
-/*=============== REUSABLE CSS CLASSES ===============*/
+
+/* =============== REUSABLE CSS CLASSES =============== */
 .container {
   max-width: 1024px;
-  margin-inline: 1.5rem;
+  margin: 0 auto; /* Use margin to center the container horizontally */
+  
 }
 
 .grid {
@@ -161,29 +175,30 @@ body.dark-theme {
 }
 
 .section {
-  padding-block: 2.5rem;
+  padding: 2.5rem 0; /* Use shorthand for padding */
 }
 
 .section__border {
   border-bottom: 1px solid var(--title-color);
   padding-bottom: 3.5rem;
+ 
 }
 
-.section__title, 
+.section__title,
 .section__subtitle {
   text-align: center;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: .25rem;
+  font-size: var(--h1-font-size); /* Define this variable */
+  font-weight: var(--font-semi-bold); /* Define this variable */
+  margin-bottom: 0.25rem;
 }
 
 .section__subtitle {
   display: block;
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  font-size: var(--small-font-size); /* Define this variable */
+  color: var(--text-color-light); /* Define this variable */
   margin-bottom: 3rem;
 }
 
@@ -290,11 +305,15 @@ body.dark-theme {
 
 /*=============== HOME ===============*/
 .home__container {
-  row-gap: 2rem;
+  row-gap: 4rem;
   padding-top: 2rem;
+  text-align: center;
 }
 
 .home__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   row-gap: 1.5rem;
 }
 
@@ -304,7 +323,6 @@ body.dark-theme {
   letter-spacing: 0.3px;
   margin-bottom: 0.5rem;
 }
-
 .home__blob {
   position: relative;
   width: 200px;
@@ -315,6 +333,7 @@ body.dark-theme {
   border-radius: 6.25rem;
   place-items: center;
   transition: background 0.4s;
+  /* margin-left: 150px; */
 }
 
 .home__profile {
@@ -327,7 +346,6 @@ body.dark-theme {
   justify-content: center;
   /* align-items: flex-end; */
 }
-
 .home__profile img {
   width: 150px;
 }
@@ -370,7 +388,7 @@ body.dark-theme {
 
 .home__info {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 2em;
 }
 
 .home__info-title {
@@ -395,6 +413,25 @@ body.dark-theme {
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
 }
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+#roleAnimation {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.animate-role {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
 /*=============== SKILLS ===============*/
 .skills__container {
   row-gap: 3.5rem;
@@ -704,73 +741,88 @@ content: '';
   right: -1.5rem;
   opacity: 0.1;
 }
+.horizontal-line {
+  width: 100%; /* Adjust the width as needed */
+  margin: 2rem auto; /* Adjust the margin as needed */
+  border: 1px solid #ccc; /* Adjust the border color as needed */
+}
 
 
 
 
 /*=============== CONTACT ===============*/
-.contact__container{
+.contact__container {
   row-gap: 3.5rem;
 }
-.contact__title{
+
+.contact__title {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 2.5rem;
 }
-.contact__title i{
+
+.contact__title i {
   font-size: 1rem;
   font-weight: initial;
 }
 
 .contact__info,
 .contact__data,
-.contact__form{
+.contact__form {
   display: grid;
 }
 
-.contact__info{
+.contact__info {
   row-gap: 2rem;
 }
-.contact__data{
-  row-gap: .75rem;
+
+.contact__data {
+  row-gap: 0.75rem;
 }
-.contact__data-title{
+
+.contact__data-title {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
-.contact__data-info{
+
+.contact__data-info {
   font-size: var(--small-font-size);
   font-family: var(--title-font);
   color: var(--title-color);
 }
-.contact__button{
+
+.contact__button {
   width: max-content;
   display: inline-flex;
-  align-items: .5rem;
+  align-items: center; /* Change align-items property */
   color: var(--text-color);
   font-size: var(--smaller-font-size);
 }
-.contact__button i{
+
+.contact__button i {
   font-size: 1rem;
-  transition: transform .3s;
-}
-.contact__button:hover i{
-  transform: translateX(.25rem);
+  transition: transform 0.3s;
 }
 
-.contact__form{
+.contact__button:hover i {
+  transform: translateX(0.25rem);
+}
+
+.contact__form {
   position: relative;
   row-gap: 2rem;
 }
-.contact__form-div{
+
+.contact__form-div {
   position: relative;
   height: 4rem;
 }
-.contact__form-input{
+
+.contact__form-input {
   position: absolute;
   top: 0;
   left: 0;
@@ -780,58 +832,65 @@ content: '';
   border-radius: 2rem;
   padding: 1.5rem;
   font-size: var(--normal-font-size);
-  font-size: var(--title-font);
+  font-family: var(--title-font); /* Fix typo here */
   color: var(--title-color);
-  background:none;
+  background: none;
   outline: none;
   z-index: 1;
 }
-.contact__form-tag{
+
+.contact__form-tag {
   position: absolute;
-  top: -.75rem;
+  top: -0.75rem;
   z-index: 10;
   background-color: var(--body-color);
   color: var(--title-color);
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
-  padding: .35rem;
-  transition: background .4s;
+  padding: 0.35rem;
+  transition: background 0.4s;
 }
-.contact__form-area{
+
+.contact__form-area {
   height: 10rem;
 }
-.contact__form-area textarea{
-  resize:none;
+
+.contact__form-area textarea {
+  resize: none;
 }
-.contact__form .contact__button{
+
+.contact__form .contact__button {
   border: none;
   background: none;
   font-size: var(--h2-font-size);
   font-family: var(--title-font);
   font-weight: var(--font-semi-bold);
-  cursor:pointer;
+  cursor: pointer; /* Fix typo here */
   outline: none;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
-.contact__form .contact__button i{
+
+.contact__form .contact__button i {
   font-size: 1.5rem;
   font-weight: initial;
 }
 
-.contact__message{
+.contact__message {
   font-size: var(--small-font-size);
   position: absolute;
   bottom: 2.8rem;
   left: 1.5rem;
 }
+
 /* Status color */
-.color-red{
-  color: hsl(4,71%,50%);
+.color-red {
+  color: hsl(4, 71%, 50%);
 }
 
-.color-blue{
-  color: hsl(207,56%,45%);
+.color-blue {
+  color: hsl(207, 56%, 45%);
 }
+
 /*=============== FOOTER ===============*/
 .footer__container{
   padding: 3rem 0 7rem;
@@ -934,6 +993,9 @@ text-decoration: underline;
   .projects__img{
     width: 200px;
     justify-content: center;
+  }
+  .home__blob{
+   margin-right: 30px;
   }
 }
 

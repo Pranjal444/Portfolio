@@ -71,6 +71,47 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+/*=============== EMAIL JS ===============*/ 
+const contactForm = document.getElementById('contact-form');
+const contactName = document.getElementById('contact-name');
+const contactEmail = document.getElementById('contact-email');
+const contactProject = document.getElementById('contact-project');
+const contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (contactName.value === '' || contactEmail.value === '' || contactProject.value === '' || contactMessage.value === '') {
+        contactMessage.classList.remove('color-blue');
+        contactMessage.classList.add('color-red');
+
+        contactMessage.textContent = 'Write all input fields';
+    } else {
+        emailjs.sendForm('service_clf2c89', 'template_me611db', '#contact-form', 'iS3Kt0YuCHvqXWKRC')
+            .then(() => {
+                contactMessage.classList.remove('color-red');
+                contactMessage.classList.add('color-blue');
+                contactMessage.textContent = 'Message sent ✅';
+
+                setTimeout(() => {
+                    contactMessage.textContent = '';
+                }, 5000);
+            })
+            .catch((err) => {
+                console.error('Error sending email:', err);
+                contactMessage.classList.remove('color-blue');
+                contactMessage.classList.add('color-red');
+                contactMessage.textContent = 'Error sending message ❌';
+
+                setTimeout(() => {
+                    contactMessage.textContent = '';
+                }, 5000);
+            });
+    }
+};
+
+contactForm.addEventListener('submit', sendEmail);
+
 /*=============== SHOW SCROLL UP ===============*/ 
 
 const scrollUp = () =>{
@@ -80,6 +121,7 @@ const scrollUp = () =>{
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
 /*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
@@ -134,3 +176,22 @@ sr.reveal('.skills__content:nth-child(2),.contact__content:nth-child(2)',{origin
 sr.reveal('.qualification__content,.services__card',{interval:100})
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const roles = ['Frontend Developer', 'Coder'];
+  const roleElement = document.getElementById('roleAnimation');
+
+  let index = 0;
+
+  function animateRoles() {
+      roleElement.textContent = roles[index];
+      roleElement.classList.add('animate-role');
+
+      setTimeout(() => {
+          roleElement.classList.remove('animate-role');
+          index = (index + 1) % roles.length;
+          setTimeout(animateRoles, 1000); // Adjust the delay between roles
+      }, 2000); // Adjust the duration of each role
+  }
+
+  animateRoles();
+});

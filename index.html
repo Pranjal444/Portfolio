@@ -16,6 +16,8 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
         <title>Responsive portfolio website By-Pranjal Pagar</title>
     </head>
     <body>
@@ -57,6 +59,11 @@
                                 <i class="ri-chat-3-line"></i>Contact
                             </a>
                         </li>
+                        <li class="nav__item">
+                            <a href="https://drive.google.com/file/d/1McjKMpFW81qvyz_uQ44k5OlromGSF7Jy/view" class="nav__link">
+                                <i class="ri-file-download-fill"></i>Download
+                            </a>
+                        </li>
                     </ul>
                     <!-- Close Button -->
                     <div class="nav__close" id="nav-close">
@@ -81,9 +88,8 @@
             <section class="home section" id="home">
                 <div class="home__container container grid section__border">
                     <div class="home__data grid">
-                        <h1 class="home__title">Hi,I'm Pranjal<br>
-                                                Frontend Developer
-                        </h1>
+                        <h1 class="home__title">Hi, I'm Pranjal<br><span id="roleAnimation"></span></h1>
+                    
                         <div class="home__blob grid">
                             <div class="home__profile">
                                 <img src="assets/img/Pran.png" alt="home profile" >
@@ -136,38 +142,34 @@
                                 Animation<br>
                             </p>
                         </div>
-                        <div>
-                            <h3 class="home__info-title">
-                                YEARS OF EXPERIENCE
-                            </h3>
-                            <p class="home__info-description">
-                                Fresher
-                            </p>
-                        </div>
                     </div>
                       <!--==================== HOME INFO 2 ====================-->
                         <div class="home__info">
-                            <div>
                                 <h3 class="home__info-title">
                                     COMPLETED PROJECTS
                                 </h3>
                                 <p class="home__info-number">
-                                    4+
+                                    6+
                                 </p>
-                            </div>
-                      <div class="home__info">
-                        <div>
+                            
+                                
+                                    <h3 class="home__info-title">
+                                        YEARS OF EXPERIENCE
+                                    </h3>
+                                    <p class="home__info-number">
+                                        Fresher
+                                    </p>
+                                
+                
                             <h3 class="home__info-title">
                                 COMPANIES WORKED
                             </h3>
                             <p class="home__info-number">
-                                1(Intern)
+                                2(Intern)
                             </p>
                         </div>
-                      </div>
-                </div>
-            </div>
-            </section>
+                   
+                   </section>
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
@@ -217,33 +219,103 @@
                             </div>
                         </div>
                     </div>
-                    <!--==================== SKILLS 2 ====================-->
+                  <!--==================== SKILLS 2 ====================-->
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        <i class="ri-codepen-line">Programming Languages</i>
+                    </h3>
+                    <div class="skills__info">
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/c.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">C</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/cpp.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">C++</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/java.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">Core Java</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                <!--==================== SKILLS 3 ====================-->
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        <i class="ri-database-2-line">Databases</i>
+                    </h3>
+                    <div class="skills__info">
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/postgresql.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">PostgreSQL</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/microsoft-sql-server.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">SQL Server</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/mysql.svg" alt="skills image" srcset="">
+                            </div>
+                            <h3 class="skills__name">MySQL</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                    </div>
+                </div>
+
+                    <!--==================== SKILLS 4 ====================-->
                     <div class="skills__content">
                         <h3 class="skills__title">
-                            <i class="ri-pantone-line"></i>Web Designer
+                            <i class="ri-tools-line">version control & tools</i>
                         </h3>
                         <div class="skills__info">
                             <div class="skills__data">
                                 <div class="skills__blob">
-                                    <img src="assets/img/figma-1.svg" alt="skills image" srcset="">
+                                    <img src="assets/img/git-icon.svg" alt="skills image" srcset="">
                                 </div>
-                                <h3 class="skills__name">Figma</h3>
-                                <span class="skills__subtitle">Basics</span>
+                                <h3 class="skills__name">Git</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                                <div class="skills__data">
+                                <div class="skills__blob">
+                                    <img src="assets/img/github-icon.svg" alt="skills image" srcset="">
+                                </div>
+                                <h3 class="skills__name">GitHub</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+                                    <img src="assets/img/visual-studio-code.svg" alt="skills image" srcset="">
+                                </div>
+                                <h3 class="skills__name">VS Code</h3>
+                                <span class="skills__subtitle">Intermediate</span>
                             </div>
                         </div>
+                        
                     </div>
-                    
-                </div>
-                 
-
-            </section>
-
+                    </section>
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section" id="qualification">
                 <h2 class="section__title">Qualification</h2>
                 <span class="section__subtitle">Experience & education</span>
                 <div class="qualification__container grid section__border">
             <!--==================== QUALIFICATION 1====================-->
+            
             <div class="qualification__content">
                 <h3 class="qualification__title">
                     <i class="ri-pencil-ruler-2-line"></i>Education
@@ -251,10 +323,20 @@
                 <div class="qualification__info">
                     <div>
                         <h3 class="qualification__name">
-                            Master of Computer Applications
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="20" height="20"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg><h3 class="qualification__name">Master of Computer Applications</h3>
+                            
                         </h3>
                         <span class="qualification__country">SIES College of Management Studies</span>
                         <span class="qualification__year">2021 – 2023</span>
+                    </div>
+                </div>
+                <div class="qualification__info">
+                    <div>
+                        <h3 class="qualification__name">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="20" height="20"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg><h3 class="qualification__name"></h3> Bachelor  of Computer Applications</h3>
+                        </h3>
+                        <span class="qualification__country">B.Y.K. College Of Commerece</span>
+                        <span class="qualification__year">2017 – 2020</span>
                     </div>
                 </div>
             </div>
@@ -264,18 +346,24 @@
                     <i class="ri-building-line"></i>Work
                 </h3>
                 <div class="qualification__info">
-                    Frontend Developer-Intern
                     <div>
-                        <h3 class="qualification__name">
-                 </h3>
-                        <span class="qualification__country">Crisil-Mumbai</span>
-                        <span class="qualification__year">Jan 2023-July 2023</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  width="20" height="20" ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/> </svg><h3 class="qualification__name">Crisil-Mumbai</h3>
+                       
+                        <span class="qualification__year">2023</span>
+                        <span class="qualification__country">Software-Developer Intern - Nashik</span>
+                    </div>
+                </div>
+                <div class="qualification__info">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  width="20" height="20" ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/> </svg>
+                        <h3 class="qualification__name">Corizo</h3>
+                        <span class="qualification__year">2022</span>
+                        <span class="qualification__country">FrontEnd-Developer Intern - Nashik</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img">
             </section>
+            
 
             <!--==================== CERTIFICATIONS ====================-->
             <section class="certification section" id="services">
@@ -358,27 +446,83 @@
                         <div class="swiper-wrapper">
                              <!--==================== PROJECTS 1 ====================-->
                              <div class="projects__content  swiper-slide">
-                                <img src="assets/img/project1.jpg" alt="projects image" class="projects__img">
+                                <img src="assets/img/zara-clone.png" alt="projects image" class="projects__img">
                                 <div>
-                                    <span class="projects__subtitle">EWS</span>
+                                    <span class="projects__subtitle">Zara-Clone</span>
                                     <h1 class="projects__title"></h1>
-                                    <a href="#" class="projects__button">View demo
+                                    <a href="https://drive.google.com/file/d/1wCPdY8Ir5-jinU-zhzA1n_1DKYeZWOiP/view?usp=sharing" class="projects__button">View demo
                                         <i class="ri-arrow-right-line"></i>
                                   </a>
                                 </div>
                              </div>
                                  <!--==================== PROJECTS 2 ====================-->
                                  <div class="projects__content  swiper-slide">
-                                    <img src="assets/img/project2.jpg" alt="projects image" class="projects__img">
+                                    <img src="assets/img/project1.jpg" alt="projects image" class="projects__img">
                                     <div>
-                                        <span class="projects__subtitle">EWS</span>
+                                        <span class="projects__subtitle">Placement Adda</span>
                                         <h1 class="projects__title"></h1>
                                         <a href="#" class="projects__button">View demo
                                             <i class="ri-arrow-right-line"></i>
                                       </a>
                                     </div>
                                  </div>
-                        </div>
+                                  <!--==================== PROJECTS 3 ====================-->
+                                  <div class="projects__content  swiper-slide">
+                                    <img src="assets/img/project2.jpg" alt="projects image" class="projects__img">
+                                    <div>
+                                        <span class="projects__subtitle">Temple Donation Management System</span>
+                                        <h1 class="projects__title"></h1>
+                                        <a href="#" class="projects__button">View demo
+                                            <i class="ri-arrow-right-line"></i>
+                                      </a>
+                                    </div>
+                                 </div>
+                                  <!--==================== PROJECTS 4 ====================-->
+                                  <div class="projects__content  swiper-slide">
+                                    <img src="assets/img/project3.jpg" alt="projects image" class="projects__img">
+                                    <div>
+                                        <span class="projects__subtitle">Early warning System</span>
+                                        <h1 class="projects__title"></h1>
+                                        <a href="#" class="projects__button">View demo
+                                            <i class="ri-arrow-right-line"></i>
+                                      </a>
+                                    </div>
+                                 </div>
+                                  <!--==================== PROJECTS 5 ====================-->
+                                  <div class="projects__content  swiper-slide">
+                                    <img src="assets/img/project4.jpg" alt="projects image" class="projects__img">
+                                    <div>
+                                        <span class="projects__subtitle">Pricing Engine</span>
+                                        <h1 class="projects__title"></h1>
+                                        <a href="#" class="projects__button">View demo
+                                            <i class="ri-arrow-right-line"></i>
+                                      </a>
+                                    </div>
+                                 </div>
+                                  <!--==================== PROJECTS 6 ====================-->
+                                  <div class="projects__content  swiper-slide">
+                                    <img src="assets/img/project3.jpg" alt="projects image" class="projects__img">
+                                    <div>
+                                        <span class="projects__subtitle">portfolio</span>
+                                        <h1 class="projects__title"></h1>
+                                        <a href="#" class="projects__button">View demo
+                                            <i class="ri-arrow-right-line"></i>
+                                      </a>
+                                    </div>
+                                 </div>
+                                  <!--==================== PROJECTS 7 ====================-->
+                                  <div class="projects__content  swiper-slide">
+                                    <img src="assets/img/project1.jpg" alt="projects image" class="projects__img">
+                                    <div>
+                                        <span class="projects__subtitle">Bus Ticket Booking System</span>
+                                        <h1 class="projects__title"></h1>
+                                        <a href="#" class="projects__button">View demo
+                                            <i class="ri-arrow-right-line"></i>
+                                      </a>
+                                    </div>
+                                 </div>
+                                 
+                                 </div>
                         <!-- Swiper arrows -->
                         <div class="swiper-button-next">
                             <i class="ri-arrow-right-s-line"></i>
@@ -397,40 +541,38 @@
             <section class="introduction section">
                 <h2 class="introduction__title">Introduction</h2>
                 <span class="introduction__subtitle">Fresher</span>
-
+            
                 <div class="container introduction__border">
-                    <div class="introduction__container ">
+                    <div class="introduction__container">
                         <div class="swiper-wrapper">
-                             <!--==================== TESTIMONIAL 1 ====================-->
-                             <div class="introduction__content ">
+                            <!--==================== TESTIMONIAL 1 ====================-->
+                            <div class="introduction__content">
                                 <p class="introduction__description">
                                     "Passionate software developer with strong
-                                     problem-solving skills. Holds certifications
+                                    problem-solving skills. Holds certifications
                                     in C++ and data structures from Coding Ninjas, 
-                                     showcasing a solid programming foundation. 
-                                  Experienced intern at Crisil, contributing to
-                                   the development of an Early Warning System for
+                                    showcasing a solid programming foundation. 
+                                    Experienced intern at Crisil, contributing to
+                                    the development of an Early Warning System for
                                     risk management. Eager learner, adept
-                                     at implementing real-world projects, 
-                                     including a placement website and temple 
-                                     donation system. Seeking a collaborative
-                                      environment to contribute effectively and
-                                       make a positive impact through meaningful                                        software solutions. "
+                                    at implementing real-world projects, 
+                                    including a placement website and temple 
+                                    donation system. Seeking a collaborative
+                                    environment to contribute effectively and
+                                    make a positive impact through meaningful
+                                    software solutions."
                                 </p>
                                 <div>
                                     <h3 class="introduction__name">Name</h3>
-                                    <span class="introduction__Subtitle">Pranjal Pagar</span>
+                                    <span class="introduction__subtitle">Pranjal Pagar</span>
                                 </div>
-                             </div>
+                                <hr class="horizontal-line">
+                            </div>
                         </div>
-                    
                     </div>
                 </div>
-               
             </section>
-
-            <!--==================== CONTACT ====================-->
-            
+             <!--==================== CONTACT ====================-->
             <section class="contact section" id="contact">
                 <h2 class="contact__title">Contact Me</h2>
                 <span class="section__subtitle">Get in touch</span>
@@ -449,9 +591,9 @@
                             </div>
             
                             <div class="contact__data">
-                                <span class="contact__data-title">Whatsapp</span>
+                                <span class="contact__data-title">WhatsApp</span>
                                 <span class="contact__data-info">7568139856</span>
-                                <!-- Add your WhatsApp link or other appropriate link -->
+                                <!-- Updated WhatsApp link -->
                                 <a href="https://wa.me/917568139856" class="contact__button">
                                     Write me
                                 </a>
@@ -472,27 +614,25 @@
                         <h3 class="contact__title">
                             <i class="ri-send-plane-line"></i>Write me your project
                         </h3>
-                        <form action="" class="contact__form" id="contact-form">
+                        <form action="your_server_endpoint" method="POST" class="contact__form" id="contact-form">
                             <div class="contact__form-div">
                                 <label class="contact__form-tag" for="contact-name">Name</label>
-                                <input type="text" name="user__name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
+                                <input type="text" name="user_name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
                             </div>
             
                             <div class="contact__form-div">
                                 <label class="contact__form-tag" for="contact-email">Email</label>
-                                <input type="email" name="user__email" required placeholder="Write your email" class="contact__form-input" id="contact-email">
+                                <input type="email" name="user_email" required placeholder="Write your email" class="contact__form-input" id="contact-email">
                             </div>
             
                             <div class="contact__form-div contact__form-area">
                                 <label class="contact__form-tag" for="contact-project">Projects</label>
-                                <textarea name="user__project" placeholder="Write your project" id="contact-project" cols="30" rows="10" class="contact__form-input"></textarea>
+                                <textarea name="user_project" placeholder="Write your project" id="contact-project" cols="30" rows="10" class="contact__form-input"></textarea>
                             </div>
+
+                            <p class="contact__message" id="contact-message">Message</p>
             
-                            <!-- <p class="contact__message" id="contact-message">Message</p>
-             -->
-                            <button type="submit" class="contact__button">Submit
-                                <i class="ri-arrow-right-up-line"></i>
-                            </button>
+                            <button type="submit" class="contact__button">Submit <i class="ri-arrow-right-up-line"></i></button>
                         </form>
                     </div>
                 </div>
